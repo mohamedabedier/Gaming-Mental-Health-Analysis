@@ -38,13 +38,13 @@ The analysis culminated in a comprehensive 3-page dynamic dashboard:
 ![Data Model](Excel%20Data%20Modeling.png)
 
 ### Page 1: Gaming and Player Demographics
-![Gaming Dashboard](Excel%20Dashboard%201.jpg)
+![Gaming Dashboard](Excel%20Dashboard%201.png)
 
 ### Page 2: Health and Sleep Analysis
-![Health Dashboard](Excel%20Dashboard%202.jpg)
+![Health Dashboard](Excel%20Dashboard%202.png)
 
 ### Page 3: Addiction and Productivity
-![Addiction Dashboard](Excel%20Dashboard%203.jpg)
+![Addiction Dashboard](Excel%20Dashboard%203.png)
 
 ---
 
