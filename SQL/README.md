@@ -10,7 +10,7 @@ The primary objective of this phase was to transition from a single flat, unopti
 
 The database design follows a dimensional modeling approach (Star Schema) consisting of **1 Fact Table** and **6 Dimension Tables**. This structure eliminates data redundancy, enforces relational integrity, and optimizes query performance.
 
-![Entity-Relationship Diagram (ERD)](ERD%20diagram.png)
+![Entity-Relationship Diagram (ERD)](ERD%20Diagram.png)
 
 ---
 
