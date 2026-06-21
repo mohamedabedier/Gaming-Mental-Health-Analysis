@@ -35,7 +35,7 @@ The analysis culminated in a comprehensive 3-page dynamic dashboard:
 ## 📊 Dashboard Previews & Data Model
 
 ### Data Architecture (Star Schema)
-![Data Model](Excel%20Data%20Modeling.png)
+![Data Model](Excel%20Schema.png)
 
 ### Page 1: Gaming and Player Demographics
 ![Gaming Dashboard](Excel%20Dashboard%201.png)
