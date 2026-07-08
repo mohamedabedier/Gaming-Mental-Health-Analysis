@@ -16,7 +16,7 @@ st.markdown("""
     <style>
         /* Default base font size */
         html, body {
-            font-size: 16px !important;
+            font-size: 14px !important;
         }
         
         /* Remove scrollbars and set height to 100vh */
@@ -55,21 +55,21 @@ st.markdown("""
         .kpi-card {
             background-color: #1b1e3d;
             border-radius: 15px;
-            padding: 1.5vh;
+            padding: 10px;
             text-align: center;
             border: 1px solid #3b3f6c;
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            margin-bottom: 4vh !important;
+            margin-bottom: 5px !important;
         }
         .kpi-title {
             color: #a4a9d6 !important;
-            font-size: 13px !important;
+            font-size: 12px !important;
             font-weight: bold !important;
-            margin-bottom: 1vh;
+            margin-bottom: 2px;
         }
         .kpi-value {
             color: #FFFFFF !important;
-            font-size: 24px !important;
+            font-size: 20px !important;
             font-weight: bold !important;
         }
     </style>
@@ -164,23 +164,23 @@ COLOR_FOURTH = "#129fa1"
 
 def apply_chart_theme(fig):
     fig.update_layout(
-        height=400,
+        height=220,
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
-        font=dict(color=TEXT_COLOR, family="Arial", size=12),
-        title_font=dict(color=TEXT_COLOR, size=15, family="Arial"),
+        font=dict(color=TEXT_COLOR, family="Arial", size=10),
+        title_font=dict(color=TEXT_COLOR, size=13, family="Arial"),
         legend=dict(font=dict(color=TEXT_COLOR), title_font=dict(color=TEXT_COLOR)),
-        margin=dict(l=30, r=20, t=60, b=20)
+        margin=dict(l=30, r=20, t=30, b=20)
     )
     fig.update_xaxes(gridcolor='#2d315a', title_font=dict(color=TEXT_COLOR, size=14, weight='bold'), tickfont=dict(color=TEXT_COLOR, weight='bold'))
     fig.update_yaxes(gridcolor='#2d315a', title_font=dict(color=TEXT_COLOR, size=14, weight='bold'), tickfont=dict(color=TEXT_COLOR, weight='bold'))
     return fig
 
 # ==================== SIDEBAR ====================
-st.markdown("<h1 style='font-size: 28px;'>🎮 Gaming & Mental Health Dashboard</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='font-size: 22px;'>🎮 Gaming & Mental Health Dashboard</h1>", unsafe_allow_html=True)
 
 with st.sidebar:
-    st.markdown("<h2 style='text-align: center; font-size: 20px;'>Navigation & Filters</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; font-size: 18px;'>Navigation & Filters</h2>", unsafe_allow_html=True)
     pass
     
     # Dashboard selector
@@ -225,7 +225,7 @@ df_filtered = df_base[
 # ==================== DASHBOARDS ====================
 
 if selected_dashboard == "Player Dashboard":
-    st.markdown("<h2>Player DashBoard</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='font-size: 20px;'>Player DashBoard</h2>", unsafe_allow_html=True)
     pass
     
     if len(df_filtered) > 0:
@@ -287,7 +287,7 @@ if selected_dashboard == "Player Dashboard":
             st.plotly_chart(fig, use_container_width=True)
 
 elif selected_dashboard == "Addiction Dashboard":
-    st.markdown("<h2>Addiction DashBoard</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='font-size: 20px;'>Addiction DashBoard</h2>", unsafe_allow_html=True)
     pass
 
     if len(df_filtered) > 0:
@@ -366,7 +366,7 @@ elif selected_dashboard == "Addiction Dashboard":
             st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
 
 elif selected_dashboard == "Health Dashboard":
-    st.markdown("<h2>Health DashBoard</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='font-size: 20px;'>Health DashBoard</h2>", unsafe_allow_html=True)
     pass
 
     # Health KPIs
