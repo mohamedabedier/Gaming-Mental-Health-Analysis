@@ -14,9 +14,9 @@ st.set_page_config(page_title="Gaming & Mental Health Analytics", layout="wide")
 # ==================== CSS STYLING ====================
 st.markdown("""
     <style>
-        /* Increase base font size responsively */
+        /* Default base font size */
         html, body {
-            font-size: 2.2vh !important;
+            font-size: 16px !important;
         }
         
         /* Remove scrollbars and set height to 100vh */
@@ -63,13 +63,13 @@ st.markdown("""
         }
         .kpi-title {
             color: #a4a9d6 !important;
-            font-size: 2vh !important;
+            font-size: 13px !important;
             font-weight: bold !important;
             margin-bottom: 1vh;
         }
         .kpi-value {
             color: #FFFFFF !important;
-            font-size: 4vh !important;
+            font-size: 24px !important;
             font-weight: bold !important;
         }
     </style>
@@ -167,8 +167,8 @@ def apply_chart_theme(fig):
         height=400,
         paper_bgcolor='rgba(0,0,0,0)',
         plot_bgcolor='rgba(0,0,0,0)',
-        font=dict(color=TEXT_COLOR, family="Arial", size=14),
-        title_font=dict(color=TEXT_COLOR, size=38, family="Arial"),
+        font=dict(color=TEXT_COLOR, family="Arial", size=12),
+        title_font=dict(color=TEXT_COLOR, size=15, family="Arial"),
         legend=dict(font=dict(color=TEXT_COLOR), title_font=dict(color=TEXT_COLOR)),
         margin=dict(l=30, r=20, t=60, b=20)
     )
@@ -177,10 +177,10 @@ def apply_chart_theme(fig):
     return fig
 
 # ==================== SIDEBAR ====================
-st.markdown("<h1 style='font-size: 3.5vh;'>🎮 Gaming & Mental Health Dashboard</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='font-size: 28px;'>🎮 Gaming & Mental Health Dashboard</h1>", unsafe_allow_html=True)
 
 with st.sidebar:
-    st.markdown("<h2 style='text-align: center; font-size: 3vh;'>Navigation & Filters</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align: center; font-size: 20px;'>Navigation & Filters</h2>", unsafe_allow_html=True)
     pass
     
     # Dashboard selector
@@ -225,7 +225,7 @@ df_filtered = df_base[
 # ==================== DASHBOARDS ====================
 
 if selected_dashboard == "Player Dashboard":
-    st.markdown("<h2 style='font-size: 3.5vh;'>Player DashBoard</h2>", unsafe_allow_html=True)
+    st.markdown("<h2>Player DashBoard</h2>", unsafe_allow_html=True)
     pass
     
     if len(df_filtered) > 0:
@@ -256,7 +256,7 @@ if selected_dashboard == "Player Dashboard":
                          color_discrete_sequence=[COLOR_BAR_PINK, COLOR_BAR_BLUE, COLOR_THIRD])
             apply_chart_theme(fig)
             fig.update_layout(title="<b>Gender Distribution</b>", showlegend=False)
-            fig.update_traces(textinfo='percent+label', hole=0.3, textposition='outside', textfont_size=24)
+            fig.update_traces(textinfo='percent+label', hole=0.3, textposition='outside', textfont_size=12)
             st.plotly_chart(fig, use_container_width=True)
             
     with r1_c2:
@@ -275,7 +275,7 @@ if selected_dashboard == "Player Dashboard":
                          color_discrete_sequence=[COLOR_BAR_PINK, COLOR_BAR_BLUE, COLOR_THIRD])
             apply_chart_theme(fig)
             fig.update_layout(title="<b>Gaming Hours by Age Group</b>", showlegend=False)
-            fig.update_traces(textinfo='percent+label', hole=0.3, textposition='outside', textfont_size=24)
+            fig.update_traces(textinfo='percent+label', hole=0.3, textposition='outside', textfont_size=12)
             st.plotly_chart(fig, use_container_width=True)
             
     with r2_c2:
@@ -287,7 +287,7 @@ if selected_dashboard == "Player Dashboard":
             st.plotly_chart(fig, use_container_width=True)
 
 elif selected_dashboard == "Addiction Dashboard":
-    st.markdown("<h2 style='font-size: 3.5vh;'>Addiction DashBoard</h2>", unsafe_allow_html=True)
+    st.markdown("<h2>Addiction DashBoard</h2>", unsafe_allow_html=True)
     pass
 
     if len(df_filtered) > 0:
@@ -337,7 +337,7 @@ elif selected_dashboard == "Addiction Dashboard":
                          color_discrete_sequence=[COLOR_HIGH, COLOR_LOW, COLOR_MOD, COLOR_SEVERE])
             apply_chart_theme(fig)
             fig.update_layout(title="<b>Addiction Risk Level by Total Spend</b>", showlegend=False)
-            fig.update_traces(textinfo='percent+label', hole=0.3, textposition='outside', textfont_size=24)
+            fig.update_traces(textinfo='percent+label', hole=0.3, textposition='outside', textfont_size=12)
             st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
 
     # Charts Row 2
@@ -366,7 +366,7 @@ elif selected_dashboard == "Addiction Dashboard":
             st.plotly_chart(fig, use_container_width=True, config={'displayModeBar': False})
 
 elif selected_dashboard == "Health Dashboard":
-    st.markdown("<h2 style='font-size: 3.5vh;'>Health DashBoard</h2>", unsafe_allow_html=True)
+    st.markdown("<h2>Health DashBoard</h2>", unsafe_allow_html=True)
     pass
 
     # Health KPIs
@@ -395,7 +395,7 @@ elif selected_dashboard == "Health Dashboard":
                          color_discrete_sequence=[COLOR_BAR_PINK, COLOR_BAR_BLUE, COLOR_THIRD])
             apply_chart_theme(fig)
             fig.update_layout(title="<b>Physical Pain by Gaming Hours</b>", showlegend=False)
-            fig.update_traces(textinfo='percent+label', textposition='outside', textfont_size=24)
+            fig.update_traces(textinfo='percent+label', textposition='outside', textfont_size=12)
             st.plotly_chart(fig, use_container_width=True)
 
     with r1_c2:
