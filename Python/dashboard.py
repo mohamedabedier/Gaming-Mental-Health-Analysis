@@ -19,19 +19,15 @@ st.markdown("""
             font-size: 14px !important;
         }
         
-        /* Remove scrollbars and set height to 100vh */
+        /* Allow scrolling for mobile */
         html, body, [data-testid="stAppViewContainer"], [data-testid="stMainBlockContainer"] {
-            height: 100vh !important;
-            overflow: hidden !important;
-        }
-        ::-webkit-scrollbar {
-            display: none !important;
+            overflow: auto !important;
         }
 
-        /* Responsive Streamlit container padding to fix the top cutoff */
+        /* Responsive Streamlit container padding */
         .block-container {
-            padding-top: 0vh !important;
-            padding-bottom: 0 !important;
+            padding-top: 2rem !important;
+            padding-bottom: 1rem !important;
             max-width: 95% !important;
         }
 
@@ -181,35 +177,32 @@ st.markdown("<h1 style='font-size: 22px;'>🎮 Gaming & Mental Health Dashboard<
 
 with st.sidebar:
     st.markdown("<h2 style='text-align: center; font-size: 18px;'>Navigation & Filters</h2>", unsafe_allow_html=True)
-    pass
     
     # Dashboard selector
     selected_dashboard = st.selectbox("Select Dashboard", ["Player Dashboard", "Addiction Dashboard", "Health Dashboard"])
     st.markdown("<hr>", unsafe_allow_html=True)
 
-    st.markdown("#### gaming_addiction_risk")
-    risk_checks = {r: st.checkbox(r, value=True, key=f"ar_{r}") for r in addiction_levels}
+    with st.form("filter_form"):
+        with st.expander("🎯 Addiction Risk Level"):
+            risk_checks = {r: st.checkbox(r, value=True, key=f"ar_{r}") for r in addiction_levels}
+
+        with st.expander("👤 Age Group"):
+            age_checks = {a: st.checkbox(a, value=True, key=f"ag_{a}") for a in age_groups}
+
+        with st.expander("⚧ Gender"):
+            gender_checks = {g: st.checkbox(g, value=True, key=f"g_{g}") for g in genders}
+
+        with st.expander("🧠 Mood Swing Frequency"):
+            freq_checks = {f: st.checkbox(f, value=True, key=f"ms_{f}") for f in frequencies}
+
+        applied = st.form_submit_button("✅ Apply Filters", use_container_width=True)
+
     selected_ar = [r for r, checked in risk_checks.items() if checked]
-
-    pass
-
-    st.markdown("#### Age_Group")
-    age_checks = {a: st.checkbox(a, value=True, key=f"ag_{a}") for a in age_groups}
     selected_ag = [a for a, checked in age_checks.items() if checked]
-
-    pass
-
-    st.markdown("#### gender")
-    gender_checks = {g: st.checkbox(g, value=True, key=f"g_{g}") for g in genders}
     selected_g = [g for g, checked in gender_checks.items() if checked]
-
-    pass
-
-    st.markdown("#### mood_swing_frequency")
-    freq_checks = {f: st.checkbox(f, value=True, key=f"ms_{f}") for f in frequencies}
     selected_ms = [f for f, checked in freq_checks.items() if checked]
 
-# Filter
+# Filter fallback (if nothing selected, show all)
 if not selected_ar: selected_ar = addiction_levels
 if not selected_ag: selected_ag = age_groups
 if not selected_g: selected_g = genders
