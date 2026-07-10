@@ -23,7 +23,7 @@ Rather than analyzing a flat, unoptimized dataset, this Python script leverages 
 ## 📊 Dashboard & Data Model
 
 ### Data Model : Star Shema
-![Dashboard 1 - Player Dashboard](Pjython%20Shema.png)
+![Data Model - Player Dashboard](Python%20Shema.png)
 
 ### Dashboard 1: Player Dashboard
 
@@ -31,8 +31,8 @@ Rather than analyzing a flat, unoptimized dataset, this Python script leverages 
 
 ### Dashboard 2: Addiction Dashboard
 
-![Dashboard 1 - Player Dashboard](Addiction%20Dashboard%20Python.png)
+![Dashboard 2 - Addiction Dashboard](Addiction%20Dashboard%20Python.png)
 
 ### Dashboard 3: Health Dashboard
 
-![Dashboard 1 - Player Dashboard](Health%20Dashboard%20Python.png)
+![Dashboard 3 - Health Dashboard](Health%20Dashboard%20Python.png)
