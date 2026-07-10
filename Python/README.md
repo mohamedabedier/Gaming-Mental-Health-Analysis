@@ -1,15 +1,10 @@
-# Gaming and Behavioral Data Analysis 🎮📊
-
-## Project Overview
-This repository contains the Python analysis phase of the **Gaming and Behavioral Data Analysis** project, developed by **The Outliers** (Mohamed Bedier, Belal Ahmed, Shahd Mohamed, Youssef Talaat, and Ibrahim Elnemer) as part of the Digital Egypt Pioneers Initiative (DEPI). 
-
-The core objective of this project is to explore the intersection of gaming habits, mental/physical health, and financial behavior. The comprehensive analysis includes three distinct dashboards and a data model schema, ensuring a robust, scalable, and business-oriented approach to extracting insights from raw data.
+# Gaming and Mental Health Python Analysis 🎮📊
 
 ## 🛠️ Tech Stack & Libraries
 * **Language:** Python 3
 * **Environment:** Jupyter Notebook
-* **Data Manipulation:** `pandas`, `numpy`
-* **Data Visualization:** `matplotlib`, `seaborn`
+* **Data Manipulation:** `pandas`, `numpy`, `sqllite 3`, `eralchemy2`, `sqlalchemy`
+* **Data Visualization:**  `streamlit`, `matplotlib`, `seaborn`
 
 ## 🧠 Analytical Approach
 Rather than analyzing a flat, unoptimized dataset, this Python script leverages a structured **Star Schema** (Fact and Dimension tables) initially modeled in SQL. By applying sequential `merge()` operations and advanced `groupby` / `crosstab` aggregations, we maintained data integrity and simulated a real-world Data Engineering pipeline.
@@ -25,16 +20,19 @@ Rather than analyzing a flat, unoptimized dataset, this Python script leverages 
 * **Physical Consequences:** Highlighting how prolonged daily gaming hours affect sleep quality, exercise routines, and physical pain (e.g., back and neck pain).
 * **Work/Academic Productivity:** Visualizing the inverse relationship between extreme gaming hours and overall productivity.
 
-## 📊 Dashboards
+## 📊 Dashboard & Data Model
 
-Below are the visual summaries generated from our exploratory data analysis (EDA):
+### Data Model : Star Shema
+![Dashboard 1 - Player Dashboard](Pjython%20Shema.png)
 
-### Dashboard 1: Player Demographics & Financial Insights
-*(Highlights spending categories, age groups, and financial correlations)*
+### Dashboard 1: Player Dashboard
 
-![Dashboard 1 - Demographics & Financials](Python%20Dashboard%201.png)
+![Dashboard 1 - Player Dashboard](Player%20Dashboard%20Python.png)
 
-### Dashboard 2: Health, Wellbeing & Addiction Risk
-*(Highlights the impact of gaming on sleep, physical pain, and social isolation)*
+### Dashboard 2: Addiction Dashboard
 
-![Dashboard 2 - Health & Wellbeing](Python%20Dashboard%202.png)
+![Dashboard 1 - Player Dashboard](Addiction%20Dashboard%20Python.png)
+
+### Dashboard 3: Health Dashboard
+
+![Dashboard 1 - Player Dashboard](Health%20Dashboard%20Python.png)
