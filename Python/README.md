@@ -22,8 +22,8 @@ Rather than analyzing a flat, unoptimized dataset, this Python script leverages 
 
 ## 📊 Dashboard & Data Model
 
-### Data Model : Star Shema
-![Data Model - Player Dashboard](Python%20Shema.png)
+### Data Model : Star Schema
+![Data Model - Star Schema](Python%20Schema.png)
 
 ### Dashboard 1: Player Dashboard
 
