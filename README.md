@@ -1,53 +1,57 @@
-# 🎮 Gaming & Mental Health: End-to-End Data Analysis
+# 🎮 Gaming & Mental Health Data Analysis
 
 ## 📌 Project Overview
-This project explores the impact of video games on players' mental and physical health. By analyzing a dataset of 1,000 detailed records, the goal was to uncover actionable insights regarding gaming habits, financial spending, social isolation, and addiction risks. This repository showcases a complete End-to-End Data Analysis lifecycle, from raw data cleaning using statistical rules to advanced Data Modeling and the creation of a dynamic, multi-page interactive dashboard.
-
-**Team:** The Outliers (Mohamed Bedier, Belal Ahmed, Shahd Mohamed, Youssef Talaat, Ibrahim Elnemer)
+This end-to-end data analytics project explores the multi-dimensional impact of gaming habits on psychological well-being, physical health, academic performance, and social isolation. Deployed across a complete data lifecycle, the project processes data from a population of **1,000 players**, structures it using advanced relational modeling, and translates deep behavioral insights into interactive business intelligence dashboards.
 
 ---
 
-## ⚙️ Methodology & Technical Highlights
-
-### 1. Statistical Data Cleaning & Outlier Detection
-To ensure the integrity of the analysis, the dataset was strictly evaluated for outliers. Instead of relying on manual assumptions, statistical rules were applied. Data points falling outside the normal distribution range (Mean ± 3 Standard Deviations) were identified and handled to prevent skewed insights.
-
-### 2. Feature Engineering (Power Query & M Code)
-Significant feature engineering was performed to transform raw metrics into business-ready categories:
-* **Spend Categories:** Created dynamic classifications (Low, Mid, High, Very High) for players' total spending using custom M code logic based on the calculated average and standard deviation.
-* **Health & Addiction Metrics:** Consolidated multiple binary columns (e.g., eye strain, back pain) into comprehensive risk indicators (`Physical_Pain` index).
-* **Demographic Groupings:** Segmented players into distinct age groups and educational states for deeper demographic correlation.
-
-### 3. Data Modeling (Star Schema)
-The raw, flat data was normalized and structured into a highly efficient **Star Schema**. 
-* **Dimension Tables:** Created clean dimension tables for Players (`Dim_Player`), Games (`Dim_Game`), Platforms (`Dim_Platform`), Sleep State (`Dim_Sleep`), Addiction (`Dim_Addiction`), and Physical Status (`Dim_PhysicalStatus`).
-* **Fact Table:** Centralized the event data using foreign keys.
-* **Resolving Ambiguity:** Successfully decoupled games and platforms, connecting them directly to the fact table. This eliminated many-to-many relationship issues, ensuring fast query performance and accurate cross-filtering.
-
-### 4. Interactive Dashboards
-The analysis culminated in a comprehensive 3-page dynamic dashboard:
-1.  **Gaming & Player:** Focuses on user demographics, preferred genres, and spending habits.
-2.  **Health:** Analyzes the physical toll of gaming, correlating gaming hours with sleep disruption frequency and physical pain risks across different platforms.
-3.  **Addiction:** Evaluates the psychological impact, measuring addiction risk levels, social isolation scores, and the subsequent effect on academic and professional productivity.
+## 👥 The Team: The Outliers
+* **Members:** Mohamed Bedier, Belal Elkhamisy, Shahd Mohamed, Youssef Talaat, Ebrahim Elnemr.
+* **Supervised by:** 📩 Dr. Amal Mahmoud 📩
 
 ---
 
-## 📊 Dashboard Previews & Data Model
+## 🗺️ Repository Structure & Architecture
 
-### Data Architecture (Star Schema)
-![Data Model](Excel%20Data%20Modeling.png)
+The repository is divided into 5 distinct specialized directories, each handling a critical layer of the data lifecycle:
 
-### Page 1: Gaming and Player Demographics
-![Gaming Dashboard](Excel%20Dashboard%201.png)
+```micro
+📂 Gaming_Mental_Health_Analysis
+ ┣ 📂 Power BI      # Interactive executive dashboards for business intelligence.
+ ┣ 📂 Python        # Exploratory Data Analysis (EDA), anomaly detection, and data processing.
+ ┣ 📂 SQL           # Relational star-schema data modeling and analytical pipeline scripts.
+ ┣ 📂 Tableau       # Analytical storytelling via "The Hidden Cost of Gaming" interactive story.
+ ┣ 📂 excel         # Initial data cleaning, verification, and metric prototyping.
+ ┗ 📜 README.md     # Main project documentation.
+🛠️ Technical Pipeline & Implementation
+1. 📂 Python
+Conducted deep Exploratory Data Analysis (EDA) to understand data distributions and feature correlations.
 
-### Page 2: Health and Sleep Analysis
-![Health Dashboard](Excel%20Dashboard%202.png)
+Applied automated outlier detection and data imputation techniques using Pandas to ensure structural readiness.
 
-### Page 3: Addiction and Productivity
-![Addiction Dashboard](Excel%20Dashboard%203.png)
+2. 📂 SQL
+Formulated a high-performance Star Schema Architecture consisting of 1 Central Fact Table and 6 optimized Dimension Tables.
 
----
+Written modular relational scripts using window functions and transactional rules (ON UPDATE CASCADE) to build the backend infrastructure.
 
+3. 📂 excel
+Utilized for initial profile validation, data sorting, and mapping foundational business metrics.
 
-## 🚀 Future Scope
-The next phase of this project involves migrating the entire ETL process, data modeling, and analysis into a relational database environment using **SQL**. This will include executing `LOAD DATA` operations, creating Views for dynamic feature engineering, and performing complex `JOIN` and `GROUP BY` aggregations.
+Prototyped data manipulation processes before pipeline deployment.
+
+4. 📂 Tableau
+Engineered a narrative-driven 5-Point Story titled "The Hidden Cost of Gaming".
+
+Visually uncovers how severe gaming risks correlate with high financial spending ($10.2K baseline), sleep deprivation (4.5 hrs/night), and high social isolation scores (6.5/10).
+
+5. 📂 Power BI
+Created highly interactive business intelligence dashboards utilizing DAX and custom parameters.
+
+Provides stakeholders with cross-filtering exploration capabilities to analyze player lifestyle demographics and behavioral patterns instantly.
+
+💡 Key High-Level Findings
+📉 Academic & Performance Fallout: A near-linear inverse relationship exists between continuous screen exposure and performance. Failing students log an average of 8.52 daily gaming hours, more than double that of excellent academic performers (3.94 hours).
+
+💸 Monetization & Mood Dynamics: Mental state directly influences in-game financial output. Anxious and depressed individuals show a 3x increase in life-time spent ($10.2K) compared to excited or low-risk profiles ($3.1K).
+
+🛑 The Addiction Threshold: Crossing the average daily gaming duration acts as a critical behavioral trigger, causing a player's likelihood of entering a Severe Risk clinical categorization to instantly spike to 61%, shrinking face-to-face social contact to a mere 3.2 hours weekly.
