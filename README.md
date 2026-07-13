@@ -16,13 +16,26 @@ This end-to-end data analytics project explores the multi-dimensional impact of 
 The repository is divided into 5 distinct specialized directories, each handling a critical layer of the data lifecycle:
 
 ```micro
-📂 Gaming_Mental_Health_Analysis
- ┣ 📂 Power BI      # Interactive executive dashboards for business intelligence.
- ┣ 📂 Python        # Exploratory Data Analysis (EDA), anomaly detection, and data processing.
- ┣ 📂 SQL           # Relational star-schema data modeling and analytical pipeline scripts.
- ┣ 📂 Tableau       # Analytical storytelling via "The Hidden Cost of Gaming" interactive story.
- ┣ 📂 excel         # Initial data cleaning, verification, and metric prototyping.
- ┗ 📜 README.md     # Main project documentation.
+## 🗺️ Repository Structure & Architecture
+
+The repository is divided into 5 distinct specialized directories, each handling a critical layer of the data lifecycle:
+
+<pre>
+📁 Gaming_Mental_Health_Analysis
+ ┣ 📂 Excel                             # Initial data cleaning, verification, and metric prototyping.
+ ┣ 📂 Power BI                          # Interactive executive dashboards for business intelligence.
+ ┣ 📂 Python                            # Exploratory Data Analysis (EDA), anomaly detection, and data processing.
+ ┣ 📂 SQL                               # Relational star-schema data modeling and analytical pipeline scripts.
+ ┣ 📂 Tableau                           # Analytical storytelling via "The Hidden Cost of Gaming" interactive story.
+ ┣ 📄 Gaming and Mental Health.csv      # Raw dataset containing player demographics and mental health metrics.
+ ┣ 📄 Gaming_Mental_Health_Full_...     # Full project comprehensive documentation and analytical report.
+ ┣ 📄 Project_Description_and_...       # Project overview, objectives, and scope definition.
+ ┣ 📜 README.md                         # Main project documentation and repository guide.
+ ┗ 📄 Team_Members_and_Task...          # Project team roles, responsibilities, and task allocation.
+</pre>
+
+---
+
 🛠️ Technical Pipeline & Implementation
 1. 📂 Python
 Conducted deep Exploratory Data Analysis (EDA) to understand data distributions and feature correlations.
