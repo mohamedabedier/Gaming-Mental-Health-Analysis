@@ -17,17 +17,18 @@ This end-to-end data analytics project explores the multi-dimensional impact of 
 The repository is divided into 5 distinct specialized directories, each handling a critical layer of the data lifecycle:
 
 <pre>
-📁 Gaming_Mental_Health_Analysis
- ┣ 📂 Excel                                         # Initial data cleaning, verification, and metric prototyping.
- ┣ 📂 Power BI                                      # Interactive executive dashboards for business intelligence.
- ┣ 📂 Python                                        # Exploratory Data Analysis (EDA), anomaly detection, and data processing.
- ┣ 📂 SQL                                           # Relational star-schema data modeling and analytical pipeline scripts.
- ┣ 📂 Tableau                                       # Analytical storytelling via "The Hidden Cost of Gaming" interactive story.
- ┣ 📄 Gaming and Mental Health.csv                  # Raw dataset containing player demographics and mental health metrics.
- ┣ 📄 Gaming_Mental_Health_Full_Documentation.pdf   # Full project comprehensive documentation and analytical report.
- ┣ 📄 Project_Description_and_idea.pdf              # Project overview, objectives, and scope definition.
- ┣ 📜 README.md                                     # Main project documentation and repository guide.
- ┗ 📄 Team_Members_and_Tasks.pdf                    # Project team roles, responsibilities, and task allocation.
+📂 Gaming_Mental_Health_Analysis
+├── 📁 Excel                                             # Initial data cleaning, verification, and metric prototyping.
+├── 📁 Power BI                                          # Interactive executive dashboards for business intelligence.
+├── 📁 Python                                            # Exploratory Data Analysis (EDA), anomaly detection, and data processing.
+├── 📁 SQL                                               # Relational star-schema data modeling and analytical pipeline scripts.
+├── 📁 Tableau                                           # Analytical storytelling via "The Hidden Cost of Gaming" interactive story.
+├── 📄 GAMING AND MENTAL HEALTH DATA ANALYSIS STUDY.PPTX # Final presentation deck covering project scope, methodology, and analytical insights.
+├── 📄 Gaming and Mental Health.csv                      # Raw dataset containing player demographics and mental health metrics.
+├── 📄 Gaming_Mental_Health_Full_Documentation.pdf       # Full project comprehensive documentation and analytical report.
+├── 📄 Project_Description_and_idea.pdf                  # Project overview, objectives, and scope definition.
+├── 📄 README.md                                         # Main project documentation and repository guide.
+└── 📄 Team_Members_and_Tasks.pdf                        # Project team roles, responsibilities, and task allocation.
 </pre>
 
 ---
